@@ -14,7 +14,7 @@ public class Main {
         double c = scanner.nextDouble();
 
         double delta = b * b - 4 * a * c;
-        double rootDelta = Math.sqrt(b);
+        double rootDelta = Math.sqrt(delta);
 
         if (delta < 0) {
             System.out.println("No zeros");
