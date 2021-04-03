@@ -12,20 +12,26 @@ public class Main {
         double b = scanner.nextDouble();
         System.out.println("Enter c: ");
         double c = scanner.nextDouble();
-
-        double delta = b * b - 4 * a * c;
-        double rootDelta = Math.sqrt(delta);
-
-        if (delta < 0) {
-            System.out.println("No zeros");
-        } else if (delta == 0) {
-            double x0 = -b / 2 * a;
-            System.out.println(x0);
-        } else if (delta > 0) {
-            double x1 = -b - rootDelta / 2 * a;
-            double x2 = -b + rootDelta / 2 * a;
-            System.out.println(x1);
-            System.out.println(x2);
+        if (a == 0) {
+            System.out.println("Linear function");
+        } else {
+            double delta = (b * b) - (4 * a * c);
+            double rootDelta = Math.sqrt(delta);
+            System.out.println(delta);
+            System.out.println(rootDelta);
+            if (delta < 0) {
+                System.out.println("No zeros");
+            } else if (delta == 0) {
+                double x0 = -b / 2 * a;
+                System.out.println(x0);
+            } else if (delta > 0) {
+                double x1 = (-b - rootDelta) / (2 * a);
+                double x2 = (-b + rootDelta) / (2 * a);
+                System.out.println(x1);
+                System.out.println(x2);
+            } else {
+                System.out.println("Error");
+            }
         }
     }
 }
